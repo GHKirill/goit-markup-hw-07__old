@@ -1,0 +1,87 @@
+.footer {
+  background-color: $secondary-back-ground-color;
+  padding: 60px 0;
+}
+.footer__container {
+  display: flex;
+  align-items: baseline;
+}
+.logo__part-transform--inverse {
+  color: $primary-white-color;
+}
+.footer__logo {
+  display: inline-block;
+  margin: 0 0 20px 0;
+}
+.card-set__column {
+  flex-direction: column;
+  gap: 10px;
+}
+.address__link {
+  font-style: normal;
+  color: $white-alfa-color;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &--white {
+  color: $primary-white-color;
+  }
+  &:hover,
+  &:focus {
+  color: $accent-color;
+  cursor: pointer;
+}
+}
+.join {
+  width: 206px;
+  margin-left: 70px;
+}
+.join__title {
+  @include font-style(700, calc(16 / 14), 0.03em, inherit); 
+  color: $primary-white-color;
+  text-transform: uppercase;
+  vertical-align: text-bottom;
+  margin-bottom: 20px;
+}
+
+.social-links-item__link--blue-white {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: $primary-white-color;
+  &:hover,
+  &:focus {
+  background-color: $accent-color;
+}
+}
+.sign {
+  display: flex;
+  align-items: flex-end;
+  margin-left: 94px;
+}
+.sign__info {
+  display: flex;
+  flex-direction: column;
+}
+.sign__proposal {
+  @include font-style(700, calc(16 / 14), 0.03em, $primary-white-color);
+  text-transform: uppercase;
+  vertical-align: text-bottom;
+  margin-bottom: 20px;
+}
+.sign__input {
+  @include font-style(inherit, calc(20 / 16), 0.03em,  rgba(255, 255, 255, 0.6), 16px);
+  width: 358px;
+  height: 50px;
+  text-indent: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+}
+.sign__button {
+  margin-left: 12px;
+}
+.button__logo {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}

@@ -1,0 +1,35 @@
+%visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+%social-links-set {
+  display: flex;
+  width: 206px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px auto 0;
+}
+%social-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: inherit;
+  color: $gray-color-links;
+  @include transition(background-color, color);
+   &:hover,
+   &:focus {
+  background-color: $accent-color;
+  color: $primary-white-color;
+}
+}

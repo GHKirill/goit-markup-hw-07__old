@@ -1,0 +1,64 @@
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  row-gap: 30px;
+  column-gap: 30px;
+}
+.projects-item {
+  display: inline-block;
+  max-width: 370px;
+  border: 1px solid $gray-color-photo-border;
+  &:hover,
+  &:focus {
+  cursor: default;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+}
+.projects-item:hover,
+.projects-item:focus {
+  cursor: default;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.projects-item__link {
+  text-decoration: none;
+  color: $primary-black-color;
+}
+.projects-item__photo {
+  display: block;
+}
+.projects-item__background {
+  position: relative;
+  overflow: hidden;
+}
+.projects-item__background-description {
+  position: absolute;
+  top: 300px;
+  left: 0;
+  display: flex;
+  padding: 63px 24px;
+  @include font-style(inherit, calc(28 / 18), 0.06em, $primary-white-color, 18px);
+  text-align: left;
+  background-color: $accent-color;
+  @include transition(transform);
+.projects-item:hover &,
+.projects-item:focus & {
+  transform: translateY(-300px);
+}
+}
+.projects-item__name {
+  @include font-style(inherit, calc(26 / 18), 0.06em, inherit, 18px);
+  margin-bottom: 4px;
+}
+.projects-item__type {
+  @include font-style(inherit, calc(30 / 16), 0.03em, $secondary-black-color, 16px);
+}
+.projects-item__description {
+  padding: 20px 24px;
+  text-align: left;
+}
+

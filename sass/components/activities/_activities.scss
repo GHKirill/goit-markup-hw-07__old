@@ -1,0 +1,32 @@
+.activities {
+  padding-bottom: 94px;
+}
+.activities__section-title {
+  margin-bottom: 50px;
+}
+.activities__item {
+  position: relative;
+}
+.activities__image {
+  display: block;
+}
+.activities__description {
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: $primary-white-color;
+}
+.activities__background {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(47, 48, 58, 0.8);
+  height: 70px;
+  width: 370px;
+}

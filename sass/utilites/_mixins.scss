@@ -1,0 +1,11 @@
+@mixin font-style($weight, $height, $spacing, $color, $size:14px, $family:$font-roboto) {
+  font-size: $size;  
+  font-weight: $weight;
+  line-height: $height;
+  letter-spacing: $spacing;
+  color: $color;
+  font-family: $family;
+}
+@mixin transition($type1:color, $type2:$type1) {
+  transition: $type1 250ms cubic-bezier(0.4, 0, 0.2, 1), $type2 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

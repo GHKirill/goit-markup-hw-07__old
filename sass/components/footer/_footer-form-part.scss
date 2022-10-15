@@ -1,0 +1,32 @@
+.sign {
+  display: flex;
+  align-items: flex-end;
+  margin-left: 94px;
+}
+.sign__info {
+  display: flex;
+  flex-direction: column;
+}
+.sign__proposal {
+  @include font-style(700, calc(16 / 14), 0.03em, $primary-white-color);
+  text-transform: uppercase;
+  vertical-align: text-bottom;
+  margin-bottom: 20px;
+}
+.sign__input {
+  @include font-style(inherit, calc(20 / 16), 0.03em,  rgba(255, 255, 255, 0.6), 16px);
+  width: 358px;
+  height: 50px;
+  text-indent: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+}
+.sign__button {
+  margin-left: 12px;
+}
+.button__logo {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}

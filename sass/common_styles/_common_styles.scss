@@ -1,0 +1,62 @@
+.body {
+  color: $primary-black-color;
+  background-color: $primary-white-color;
+  font-family: $font-roboto;
+  font-size: 14px;
+}
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.list,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.link,
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.button {
+  background-color: $accent-color;
+  @include font-style(700, calc(30/16), 0.06em, $primary-white-color, 16px);
+  padding: 10px 10px;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  margin: 0 auto;
+  min-width: 200px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+}
+.section-title {
+  @include font-style(700, calc(42/36), 0.03em, inherit, 36px);
+  text-align: center;
+}
+.social-links-set {
+@extend %social-links-set;
+}
+.social-links-item__link {
+@extend %social-link;
+}
+.social-links-item__svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}

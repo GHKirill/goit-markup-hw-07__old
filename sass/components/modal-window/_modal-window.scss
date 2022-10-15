@@ -1,0 +1,188 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  visibility: visible;
+  @include transition(visibility, opacity);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.modal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  margin: 0;
+  width: 528px;
+  height: 581px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: $primary-white-color;
+}
+.modal__button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: white;
+  @include transition(fill);
+  &:hover,
+  &:focus {
+  fill: $accent-color;
+  cursor: pointer;
+}
+}
+.modal__icon-button-svg {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 11px;
+  height: 11px;
+}
+.modal-proposal {
+  margin-bottom: 12px;
+  @include font-style(700, calc(23 / 20), 0.03em, $secondary-black-color,20px);
+  text-align: center;
+}
+.modal__container {
+  width: 448px;
+  margin: 0 auto;
+}
+.modal-form__field {
+  position: relative;
+  height: 58px;
+  padding-top: 18px;
+}
+.modal-form__input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 50px;
+  @include transition(color, border-color);
+  .modal-form__field:focus-within &,
+  &:not(:placeholder-shown) {
+  color: $accent-color;
+  border-color: $accent-color; 
+}
+}
+.modal-form__label {
+  position: absolute;
+  top: 32px;
+  left: 50px;
+  @include font-style(inherit, calc(14 / 12), 0.01em, $secondary-black-color,12px);
+  @include transition(transform, color);
+  .modal-form__field:focus-within > &,
+  .modal-form__input:not(:placeholder-shown) + & {
+  transform: translate(-50px, -30px);
+}
+}
+.modal-form__icon {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: 15px;
+  top: calc(50% + 3px);
+  width: 12px;
+  height: 12px;
+  transition: fill 500ms linear;
+  .modal-form__field:focus-within > &,
+  .modal-form__input:not(:placeholder-shown) ~ & {
+  fill: $accent-color;
+}
+}
+.modal-form-comment {
+  height: 138px;
+  padding: 0;
+  margin-top: 10px;
+}
+.modal-form-comment__input {
+  height: 120px;
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+& {
+  @include font-style(inherit, calc(14 / 12), 0.01em, $secondary-black-color,12px);
+};
+&:focus-within &,
+&:not(:placeholder-shown) {
+  color: $accent-color;
+  border-color: $accent-color;
+}
+}
+.modal-form-comment__label {
+  display: inline-block;
+  margin-bottom: 4px;
+& {
+  @include font-style(inherit, calc(14 / 12), 0.01em, $secondary-black-color);
+}
+}
+.form-field-check {
+  position: relative;
+  display: block;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.modal-form-check {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.modal-form-check__label {
+  display: block;
+  margin: 0 auto;
+text-align: center;
+@include font-style(inherit,  calc(16 / 14), inherit, $secondary-black-color, 14px);
+}
+.modal-form-check__link {
+  color: $accent-color;
+}
+.modal-form-check__icon {
+  position: absolute;
+  display: block;
+  margin-left: 15px;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 16px;
+  height: 15px;
+  background-color: $primary-white-color;
+  fill: $primary-white-color;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  @include transition(background-color, border-color);
+  .modal-form-check__input:checked ~ & {
+  background-color: $accent-color;
+  border-color: $accent-color;
+}
+}
+.modal-form-check__input {
+  @extend %visually-hidden;
+}
+.modal-form__button {
+  color: $primary-white-color;
+}

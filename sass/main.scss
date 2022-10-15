@@ -1,0 +1,16 @@
+@import "./base/modern-normalize";
+// @import "./base/fonts";
+@import "./utilites/variables";
+@import "./utilites/mixins";
+@import "./utilites/placeholders";
+@import "./common_styles/common_styles";
+@import "./components/header/header";
+@import "./components/hero/hero";
+@import "./components/advantages/advantages";
+@import "./components/activities/activities";
+@import "./components/team/team";
+@import "./components/clients/clients";
+@import "./components/footer/footer";
+@import "./components/modal-window/modal-window";
+@import "./components/portfolio_selectors/portfolio_selectors";
+@import "./components/portfolio-projects/portfolio-projects";
